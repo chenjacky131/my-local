@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      width: 100px;
+      height: 100px;
+      background-color: #f00;
+    }
+  </style>
+</head>
+<body>
+<audio src="./alarm1.wav" id="sound1" muted></audio>
+  
+<script>
+window.onload = () => {
+  var s1 = document.querySelector('#sound1')
+  s1.muted = false
+  s1.play().catch(() => {
+    console.warn('请开启声音权限以播报报警声音')
+  })
+}
+</script>
+</body>
+</html>
