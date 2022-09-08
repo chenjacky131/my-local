@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Indexer>
+    <coverages>
+        <coverage>
+            <schema name="u-component_of_wind_isobaric">
+                <attributes>the_geom:Polygon,imageindex:Integer,time:java.util.Date,isobaric:java.lang.Float</attributes>
+            </schema>
+            <origName>u-component_of_wind_isobaric</origName>
+            <name>u-component_of_wind_isobaric</name>
+        </coverage>
+        <coverage>
+            <schema name="v-component_of_wind_isobaric">
+                <attributes>the_geom:Polygon,imageindex:Integer,time:java.util.Date,isobaric:java.lang.Float</attributes>
+            </schema>
+            <origName>v-component_of_wind_isobaric</origName>
+            <name>v-component_of_wind_isobaric</name>
+        </coverage>
+    </coverages>
+</Indexer>

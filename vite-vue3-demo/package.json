@@ -1,0 +1,26 @@
+{
+  "name": "vite-vue3-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 8080",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^7.5.5",
+    "authing-js-sdk": "^0.1.18",
+    "exceljs": "^4.3.0",
+    "jack-test-1": "^1.0.2",
+    "validatorjs": "^3.22.1",
+    "vue": "^3.2.25",
+    "vue-color": "^2.8.1",
+    "vue-router": "^4.0.14",
+    "xlsx": "^0.18.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  }
+}

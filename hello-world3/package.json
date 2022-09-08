@@ -1,0 +1,41 @@
+{
+  "name": "hello-world3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@vee-validate/i18n": "^4.6.2",
+    "@vee-validate/rules": "^4.6.2",
+    "@vue/composition-api": "^1.4.5",
+    "@vueuse/core": "^7.5.5",
+    "axios": "^0.25.0",
+    "core-js": "^3.6.5",
+    "d3": "^7.3.0",
+    "jack-test-1": "^1.0.4",
+    "leaflet": "^1.7.1",
+    "leaflet-draw": "^1.0.4",
+    "leaflet-heatmap": "^1.0.0",
+    "leaflet-polylinedecorator": "^1.6.0",
+    "mitt": "^3.0.0",
+    "qs": "^6.10.3",
+    "recordrtc": "^5.6.2",
+    "vee-validate": "^4.6.2",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0",
+    "web-audio-recorder-js": "^0.0.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
+  }
+}

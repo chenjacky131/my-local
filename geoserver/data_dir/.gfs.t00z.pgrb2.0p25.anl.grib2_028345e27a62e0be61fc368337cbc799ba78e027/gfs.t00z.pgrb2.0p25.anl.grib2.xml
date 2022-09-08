@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Indexer>
+    <coverages>
+        <coverage>
+            <schema name="Temperature_isobaric">
+                <attributes>the_geom:Polygon,imageindex:Integer,time:java.util.Date,isobaric:java.lang.Float</attributes>
+            </schema>
+            <origName>Temperature_isobaric</origName>
+            <name>Temperature_isobaric</name>
+        </coverage>
+    </coverages>
+</Indexer>

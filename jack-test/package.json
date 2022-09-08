@@ -1,0 +1,16 @@
+{
+  "name": "jack-test-1",
+  "version": "1.0.4",
+  "description": "testing npm publish",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chenjacky131/Jack-Test.git"
+  }  
+}

@@ -1,0 +1,10 @@
+https://github.com/onaci/leaflet-velocity
+https://github.com/sakitam-fdd/wind-layer
+https://github.com/chysxslt/leaflet-vector-scalar-js
+https://github.com/RaymanNg/3D-Wind-Field
+https://github.com/cambecc/earth
+https://www.ventusky.com/
+https://mp.weixin.qq.com/s/KYdXK4hDFSQPl8gca8SMqQ
+
+ÎÀÐÇÍ¼×ÊÔ´:
+http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
