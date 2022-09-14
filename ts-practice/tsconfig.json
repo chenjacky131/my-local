@@ -1,3 +1,6 @@
 {
-  "lib": ["ES6", "DOM"]
+  "lib": ["ES6", "DOM"],
+  "compilerOptions": {
+    "strictNullChecks": true  //  严格模式
+  },  
 }
