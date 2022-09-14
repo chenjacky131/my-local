@@ -1,9 +1,7 @@
-interface Person {
-  name: string;
-  age: number;
-  gender: string;
+enum Color {
+  RED = '红色',
+  PINK = '粉色',
+  BLUE = '蓝色'
 }
-type P1 = Omit<Person, 'gender' | 'age'>; //  {name: string}
-const user:P1 = {
-  name: 'tom'
-}
+const pink: Color = Color.PINK;
+console.log(pink);  //  粉色
