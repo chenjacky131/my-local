@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
+import { useStore } from 'vuex'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import Global from '@/utils/global'
 import 'leaflet/dist/leaflet.css'
-
 const app = createApp(App)
   app.config.errorHandler = (err, vm, info) => {
     console.log('err: ', err)

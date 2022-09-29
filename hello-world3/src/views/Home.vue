@@ -5,7 +5,7 @@
 </template>
 <script setup>
 import {ref} from 'vue'
-import Placeholder from '@/components/YupDemo.vue'
+import Placeholder from '@/components/Ezuikit.vue'
 </script>
 <style lang="scss" scoped>
 .home{

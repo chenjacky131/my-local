@@ -3,8 +3,11 @@ module.exports = {
   devServer:{
     proxy:{
       '/api/':{
-        target: 'https://www.yiketianqi.com/',
-        changeOrigin: true
+        target: 'http://39.106.100.236',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
       }
     }
   }

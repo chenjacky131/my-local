@@ -4,30 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>memory leak</title>
   <style>
+    #container{
+      width: 1000px;
+      height: 1000px;
+      background-color: lightblue;
+    }
   </style>
 </head>
 <body>
-  <p>push date for <button class="count-date">0</button> times</p>
-  <p>add Date: <button class="push-date">add date</button></p>
-  <p>clear: <button class="clear">clear</button></p>
+<div id="container"></div>
+<button id="button">取消</button>
 <script>
-  const pushDate = document.querySelector('.push-date');
-  const dateCount = document.querySelector('.count-date');
-  let dateArr = [];
-  let dateNum = 0;
-  pushDate.addEventListener('click', function add(){
-    dateCount.innerHTML = `${++dateNum}`;
-    for(let j = 0; j < 3000; ++j){
-      dateArr.push(new Date());
-    }
-  });
-  const clear = document.querySelector('.clear');
-  clear.addEventListener('click', function doClear(){
-    dateArr = [];
-    dateNum = 0;    
-  })
 </script>
 </body>
 </html>
