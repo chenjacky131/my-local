@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8889",
     "build": "vue-cli-service build"
   },
   "dependencies": {
@@ -20,9 +20,13 @@
     "leaflet-draw": "^1.0.4",
     "leaflet-heatmap": "^1.0.0",
     "leaflet-polylinedecorator": "^1.6.0",
+    "leaflet.animatedmarker": "^1.0.0",
+    "leaflet.bezier": "^0.1.1",
+    "leaflet.motion": "^0.3.2",
     "mitt": "^3.0.0",
     "qs": "^6.10.3",
     "recordrtc": "^5.6.2",
+    "snapsvg": "^0.5.1",
     "vee-validate": "^4.6.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",

@@ -5,7 +5,7 @@
 </template>
 <script setup>
 import {ref} from 'vue'
-import Placeholder from '@/components/Ezuikit.vue'
+import Placeholder from '@/components/Canvas.vue'
 </script>
 <style lang="scss" scoped>
 .home{

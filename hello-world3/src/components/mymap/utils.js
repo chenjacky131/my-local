@@ -1,3 +1,4 @@
+import { latLng } from "leaflet";
 
 export const addMapBoxTile = (map) => {
   //  添加地图图层
@@ -215,9 +216,9 @@ export const init = () => {
   L.control.scale({
     imperial: false
   }).addTo(map);
-  // map.on('click', ({latlng, layerPoint, containerPoint, originalEvent}) => {
-  //   console.log('latlng:', latlng, ' layerPoint:', layerPoint, ' containerPoint:', containerPoint, ' originalEvent:', originalEvent)
-  // })
+  map.on('click', ({latlng, layerPoint, containerPoint, originalEvent}) => {
+    console.log('latlng:', latlng, ' layerPoint:', layerPoint, ' containerPoint:', containerPoint, ' originalEvent:', originalEvent)
+  })
   addMapBoxTile(map);
   return map
 };
@@ -238,4 +239,103 @@ export const drawBar = (map,{point1, point2, angle, barHeight, color}) => {
 }
 export const draw = (map, point, color = 'yellow') => {
   L.circle(point, {color: color}).addTo(map);
+}
+const durationRun = (duration) => {
+  return new Promise((resolve,reject) => {
+    setTimeout(() => {
+      resolve()
+    }, duration);
+  })
+}
+export const drawTrackAnimate = (map) => {
+  const duration = 3000;
+  var myIcon = L.divIcon({html: "<div class='logo' motion-base='4050'></div>", iconSize: [20,20]});
+  const l1 = L.motion.polyline([ {lat: 24.44621196143135, lng: 118.03367614746095}, {lat: 24.41776725577444, lng: 118.09925079345705}], {
+    color: "red"
+  }, {
+  }, {
+    removeOnEnd: true,
+    showMarker: true,
+    icon:  myIcon
+  }).motionDuration(duration);
+  const l2 = L.motion.polyline([ {lat: 24.41776725577444, lng: 118.09925079345705}, {lat: 24.437772992870016, lng: 118.16345214843751}], {
+    color: "red"
+  }, {
+  }, {
+    removeOnEnd: true,
+    showMarker: false,
+    icon:  myIcon
+  }).motionDuration(duration);
+  const l22 = L.motion.polyline([ {lat: 24.42776725577444, lng: 118.09925079345705}, {lat: 24.447772992870016, lng: 118.16345214843751}], {
+    color: "red"
+  }, {
+  }, {
+    removeOnEnd: true,
+    showMarker: false,
+    icon:  myIcon
+  }).motionDuration(duration);
+  const l3 = L.motion.polyline([ {lat: 24.437772992870016, lng: 118.16345214843751}, {lat: 24.50245730590211, lng: 118.21357727050783}], {
+    color: "red"
+  }, {
+  }, {
+    removeOnEnd: true,
+    showMarker: false,
+    icon:  myIcon
+  }).motionDuration(duration);
+  const l4 = L.motion.polyline([ {lat: 24.50245730590211, lng: 118.21357727050783}, {lat: 24.546186296608525, lng: 118.19229125976564}], {
+    color: "red"
+  }, {
+  }, {
+    removeOnEnd: false,
+    showMarker: false,
+    icon:  myIcon
+  }).motionDuration(duration);
+  // const group1 = L.motion.group([l1]);
+  // const group2 = L.motion.group([l2,l22]);
+  // const group3 = L.motion.group([l3]);
+  // const group4 = L.motion.group([l4]);
+  // group1.addTo(map)
+  // group2.addTo(map);
+  // group3.addTo(map)
+  // group4.addTo(map)
+  var seqGroup = L.motion.seq([
+    l1
+  ]).addTo(map);
+  // group1.motionStart()
+  // await durationRun(duration)
+  // group2.motionStart()
+  // await durationRun(duration)
+  // group3.motionStart()  
+  // await durationRun(duration)
+  // group4.motionStart()
+  // seqGroup.motionStart()
+  // l1.addTo(map)
+  // l1.motionStart()
+  // l2.addTo(map)
+  // l2.motionStart()
+  seqGroup.motionStart()
+  let lastPoint = {lat: 24.41776725577444, lng: 118.09925079345705};
+  map.on('click', ({latlng, layerPoint, containerPoint, originalEvent}) => {
+    const layer = L.motion.polyline([lastPoint, latlng], {
+      color: "red"
+    }, {
+    }, {
+      removeOnEnd: true,
+      showMarker: false,
+      icon:  myIcon
+    }).motionDuration(duration);;
+    seqGroup.addLayer(layer, true)
+    lastPoint = latlng;
+    // l1.motionResume();
+  })
+  // L.motion.polyline(, {
+  //   color: "red"
+  // }, {
+  //   auto: true,
+  //   duration: 2000
+  // }, {
+  //   removeOnEnd: false,
+  //   showMarker: true,
+  //   icon:  L.divIcon({html: "<i motion-base='180'>@</i>", iconSize: [20,20]})
+  // }).addTo(map);
 }
