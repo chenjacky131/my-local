@@ -9,8 +9,6 @@
   "dependencies": {
     "@vee-validate/i18n": "^4.6.2",
     "@vee-validate/rules": "^4.6.2",
-    "@vue/composition-api": "^1.4.5",
-    "@vueuse/core": "^7.5.5",
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "d3": "^7.3.0",
@@ -19,6 +17,7 @@
     "leaflet": "^1.7.1",
     "leaflet-draw": "^1.0.4",
     "leaflet-heatmap": "^1.0.0",
+    "leaflet-plugin-trackplayback": "^1.0.5",
     "leaflet-polylinedecorator": "^1.6.0",
     "leaflet.animatedmarker": "^1.0.0",
     "leaflet.bezier": "^0.1.1",

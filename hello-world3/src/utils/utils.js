@@ -103,3 +103,27 @@ export const _fixDeg = (deg) => {
     return deg
   }
 }
+/**
+ * @description: 休眠函数
+ * @param {Number} delay  休眠时长（毫秒）
+ * @return {*}
+ */
+export const sleep = (delay) => {
+  let start = +new Date();
+  while(+new Date() - start < delay){
+    continue;
+  }
+};
+/**
+ * @description: 排序函数
+ * @param {Array} arr 要排序的数组
+ * @param {String} type 排序类型ascend升序,descend降序
+ * @return {Array}  返回排序后的数组
+ */
+export const mySort = (arr, type) => {
+  arr.sort((a,b) => {
+    if(type === 'ascend') return a - b;
+    if(type === 'descend') return b - a;
+  });
+  return arr;
+}

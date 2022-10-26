@@ -1,4 +1,4 @@
-import { latLng } from "leaflet";
+import { latLng, Util } from "leaflet";
 
 export const addMapBoxTile = (map) => {
   //  添加地图图层
@@ -338,4 +338,10 @@ export const drawTrackAnimate = (map) => {
   //   showMarker: true,
   //   icon:  L.divIcon({html: "<i motion-base='180'>@</i>", iconSize: [20,20]})
   // }).addTo(map);
+}
+function a(){
+  console.log('aaa')
+}
+export default {
+  a
 }
