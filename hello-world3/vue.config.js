@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 module.exports = {
   devServer:{
     proxy:{
@@ -10,5 +9,6 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  publicPath: './'
 }

@@ -4,8 +4,7 @@
   </div>
 </template>
 <script setup>
-import {ref} from 'vue'
-import Placeholder from '@/components/Canvas.vue'
+import Placeholder from '@/components/CanvasSignCopy';
 </script>
 <style lang="scss" scoped>
 .home{

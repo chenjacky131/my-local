@@ -386,8 +386,26 @@ const initCanvas = () => {
   const canvas = document.querySelector('#canvas');
   if(canvas.getContext){
     const ctx = canvas.getContext('2d');
-    processColor(ctx);
-    colorPick(canvas,ctx);
+    ctx.save();
+    ctx.strokeStyle = 'green';
+    ctx.translate(250,250);
+    ctx.moveTo(-250, 0);
+    ctx.lineTo(250,0);
+    ctx.stroke(); 
+    ctx.restore();
+    ctx.save();
+    ctx.translate(250,250);
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.moveTo(0, 250);
+    ctx.lineTo(0, -250);
+    ctx.stroke();
+    ctx.fillText('x', 250/2, 0);
+    ctx.fillText('y', 0,250/2);
+    // ctx.restore();
+    ctx.rotate(-Math.PI/180 * 90)
+    ctx.fillText('x1', 10, 0);
+    ctx.fillText('y1', 0, 10);
   }  
 }
 onMounted(() => {
