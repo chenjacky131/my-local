@@ -234,8 +234,8 @@ const advanceAnimation = (ctx) => {  //  高级动画
     y: 50,
     radius: 25,
     color: 'blue',
-    vx:1,
-    vy:3,
+    vx:4,
+    vy:4,
     draw: function(){
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, true);
@@ -247,18 +247,19 @@ const advanceAnimation = (ctx) => {  //  高级动画
   function draw(){
     // ctx.clearRect(0,0,500,500);
     //  用带透明度的矩形代替清空
-    ctx.fillStyle = 'rgba(255,255,255,0.1)';
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
     ctx.fillRect(0,0,500,500);
     ball.draw();
     //  添加加速度
     ball.vx *= .995
-    ball.vy += .35
+    ball.vy += .65
     //  添加速率
     ball.x += ball.vx;
     ball.y += ball.vy;
     //  添加边界
     const x = ball.x + ball.vx;
     const y = ball.y + ball.vy;
+    console.log(y)
     if(x > 500 || x < 0){
       ball.vx = -ball.vx;
     }
@@ -386,26 +387,8 @@ const initCanvas = () => {
   const canvas = document.querySelector('#canvas');
   if(canvas.getContext){
     const ctx = canvas.getContext('2d');
-    ctx.save();
-    ctx.strokeStyle = 'green';
-    ctx.translate(250,250);
-    ctx.moveTo(-250, 0);
-    ctx.lineTo(250,0);
-    ctx.stroke(); 
-    ctx.restore();
-    ctx.save();
-    ctx.translate(250,250);
-    ctx.beginPath();
-    ctx.strokeStyle = 'red';
-    ctx.moveTo(0, 250);
-    ctx.lineTo(0, -250);
-    ctx.stroke();
-    ctx.fillText('x', 250/2, 0);
-    ctx.fillText('y', 0,250/2);
-    // ctx.restore();
-    ctx.rotate(-Math.PI/180 * 90)
-    ctx.fillText('x1', 10, 0);
-    ctx.fillText('y1', 0, 10);
+    drawImage(ctx);
+    colorPick(canvas, ctx)
   }  
 }
 onMounted(() => {

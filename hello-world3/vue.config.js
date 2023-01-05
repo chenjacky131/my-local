@@ -1,14 +1,14 @@
 module.exports = {
   devServer:{
     proxy:{
-      '/api/':{
-        target: 'http://39.106.100.236',
+      '/api':{
+        target: 'https://mini.jackchen7003.top',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/api':''
         }
       }
     }
   },
-  publicPath: './'
+  publicPath: process.env.NODE_ENV === 'development' ? '':'/dist'
 }

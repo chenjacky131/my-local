@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import Placeholder from '@/components/CanvasSignCopy';
+import Placeholder from '@/components/Test';
 </script>
 <style lang="scss" scoped>
 .home{
