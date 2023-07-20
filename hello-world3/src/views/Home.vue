@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import Placeholder from '@/components/Test.vue';
+import Placeholder from '@/components/maplibreMap.vue';
 </script>
 <style lang="scss" scoped>
 .home{
