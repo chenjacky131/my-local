@@ -1,5 +1,4 @@
-import { latLng, Util } from "leaflet";
-
+import * as turf from '@turf/turf';
 export const addMapBoxTile = (map) => {
   //  添加地图图层
   const tileLayer = L.tileLayer(
@@ -338,6 +337,17 @@ export const drawTrackAnimate = (map) => {
   //   showMarker: true,
   //   icon:  L.divIcon({html: "<i motion-base='180'>@</i>", iconSize: [20,20]})
   // }).addTo(map);
+}
+//  获取地图的像素与公里的比例
+export const getMapRatio = (map, special) => {
+  const {width, height} = map.getCanvas();
+  const lngLatMiddle = map.unproject({x: width/2, y: height/2});
+  const lngLatRightMiddle = map.unproject({x: width, y: height/2});
+  const from = turf.point([lngLatMiddle.lng, lngLatMiddle.lat]);
+  const to = turf.point([lngLatRightMiddle.lng, lngLatRightMiddle.lat]);
+  const ratio1 = turf.distance(from, to)/(width/2);
+  const ratio2 = lngLatMiddle.distanceTo(lngLatRightMiddle)/(width/2);
+  return special ? ratio1 : ratio2;
 }
 function a(){
   console.log('aaa')

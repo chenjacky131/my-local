@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 8889",
+    "serve": "vue-cli-service serve --port 8889 --open",
     "build": "vue-cli-service build"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
     "d3": "^7.3.0",
+    "exceljs": "^4.4.0",
     "ezuikit-js": "^0.6.3",
     "jack-test-1": "^1.0.4",
     "leaflet-draw": "^1.0.4",
@@ -29,6 +30,8 @@
     "qs": "^6.10.3",
     "recordrtc": "^5.6.2",
     "snapsvg": "^0.5.1",
+    "terra-draw": "^0.0.1-alpha.48",
+    "terraformer": "^1.0.12",
     "vee-validate": "^4.6.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
