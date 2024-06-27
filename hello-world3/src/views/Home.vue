@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import Placeholder from '@/components/maplibreMap.vue';
+import Placeholder from '@/components/ChartPage.vue';
 </script>
 <style lang="scss" scoped>
 .home{

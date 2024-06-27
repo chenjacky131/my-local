@@ -339,15 +339,13 @@ export const drawTrackAnimate = (map) => {
   // }).addTo(map);
 }
 //  获取地图的像素与公里的比例
-export const getMapRatio = (map, special) => {
-  const {width, height} = map.getCanvas();
-  const lngLatMiddle = map.unproject({x: width/2, y: height/2});
-  const lngLatRightMiddle = map.unproject({x: width, y: height/2});
-  const from = turf.point([lngLatMiddle.lng, lngLatMiddle.lat]);
-  const to = turf.point([lngLatRightMiddle.lng, lngLatRightMiddle.lat]);
-  const ratio1 = turf.distance(from, to)/(width/2);
-  const ratio2 = lngLatMiddle.distanceTo(lngLatRightMiddle)/(width/2);
-  return special ? ratio1 : ratio2;
+export const getMapRatio = (map) => {
+  const y = map._container.clientHeight / 2;
+  const left = map.unproject([0, y]);
+  const right = map.unproject([10000, y]);
+  const maxMeters = left.distanceTo(right);
+  const ratio = maxMeters/10000;
+  return ratio;
 }
 function a(){
   console.log('aaa')

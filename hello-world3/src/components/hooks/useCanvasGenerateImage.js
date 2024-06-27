@@ -149,12 +149,12 @@ export const canvasGenerateImage = (options) => {
   }
   return canvas.toDataURL();  //  将画布的绘制结果导出到base64格式的图片地址
 }
-export const generateBigShipImage = (width, fillColor, strokeColor) => {
-  const bigShipWidth = width;
-  const bigShipHeight = (75/20) * bigShipWidth;
+export const generateBigShipImage = (length, fillColor, strokeColor) => {
+  const bigShipWidth = length/9.185;
+  const bigShipHeight = length;
   return canvasGenerateImage({
     shape: 'bigShip',
-    strokeWidth: 2,
+    strokeWidth: 1,
     bigShipHeight,
     bigShipWidth,
     fillColor,

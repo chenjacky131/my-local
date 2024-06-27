@@ -2,7 +2,7 @@
  * @Author: ccw chenjacky131@gmail.com
  * @Date: 2023-07-20 09:43:37
  * @LastEditors: ccw chenjacky131@gmail.com
- * @LastEditTime: 2023-08-04 17:14:12
+ * @LastEditTime: 2024-05-09 11:20:50
  * @FilePath: \hello-world3\public\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -13,6 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link
+    href="/maplibre-gl.css"
+    rel="stylesheet"
+  />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -20,9 +24,9 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
+    <!-- <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
     <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/OBJLoader.js"></script>
-    <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/MTLLoader.js"></script> -->
 
     <!-- built files will be auto injected -->
   </body>
