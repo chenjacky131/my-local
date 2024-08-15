@@ -7,6 +7,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@deck.gl/core": "^9.0.21",
+    "@deck.gl/layers": "^9.0.21",
+    "@deck.gl/mapbox": "^9.0.21",
     "@turf/turf": "^6.5.0",
     "@vee-validate/i18n": "^4.6.2",
     "@vee-validate/rules": "^4.6.2",
@@ -25,7 +28,7 @@
     "leaflet.animatedmarker": "^1.0.0",
     "leaflet.bezier": "^0.1.1",
     "leaflet.motion": "^0.3.2",
-    "maplibre-gl": "^3.3.1",
+    "maplibre-gl": "4.5.0",
     "mitt": "^3.0.0",
     "multiparty": "^4.2.3",
     "qs": "^6.10.3",
@@ -34,6 +37,7 @@
     "terra-draw": "^0.0.1-alpha.48",
     "terraformer": "^1.0.12",
     "three": "^0.164.1",
+    "threebox-plugin": "^2.2.7",
     "vee-validate": "^4.6.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",

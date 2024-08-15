@@ -1,14 +1,20 @@
 <template>
-  <div class="dragContainer" id="p1" v-resize:ratio-2-1-100-600-100-600 v-drag>
+  <div class="dragContainer" id="grow">
     <div class="title">标题</div>
     <div>内容</div>
   </div>
 </template>
 <script setup>
-import { dirResize } from '@/directive/resize.js';
-import { dirDrag } from '@/directive/drag.js';
-const vResize = dirResize;
-const vDrag = dirDrag;
+import { onMounted } from 'vue';
+onMounted(() => {
+  var x = [];
+
+function grow() {
+  x.push(new Array(1000000).join('x'));
+}
+
+document.getElementById('grow').addEventListener('click', grow);
+});
 </script>
 <style lang="scss" scoped>
 .dragContainer{
